@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            background: white;
+            justify-content: space-between;
+
+
+        }
+
+        body {
+            background: #fff;
+        }
+
+        .logo img {
+            width: 70px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 25px;
+            font-weight: 600;
+            font-size: 14px;
+
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .image img {
+            position: relative;
+            width: 1260px;
+            height: 500px;
+        }
+
+        .content {
+            width: 550px;
+            position: absolute;
+            top: 180px;
+            left: 600px;
+            color: white;
+
+
+
+        }
+
+        .content h1 {
+            font-size: 30px;
+            color: #f6c51a;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+
+
+        }
+
+        button {
+            padding: 14px 35px;
+            background: transparent;
+            border: 2px solid gold;
+            color: gold;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: gold;
+            color: black;
+        }
+
+        .pic {
+            display: grid;
+            grid-template-columns: 24% 24% 24% 24%;
+            gap: 1%;
+            margin-top: 20px;
+
+
+        }
+
+        .photos {
+            border: 1px solid black;
+            padding: 20px;
+           
+
+        }
+        .photos p{
+            color: grey;
+             margin-top: 15px; 
+        }
+        .photos h4{
+            margin-top: 10px;
+        }
+
+        .valli {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .heading {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .heading a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            position: relative;
+
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+
+
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            */ color: white;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .profile {
+            display: flex;
+            gap: 15px;
+        }
+
+        .profile p {
+            line-height: 28px;
+        }
+
+        .tweet {
+            margin-top: 25px;
+        }
+
+        .tweet-head {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            margin-top: 40px;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            background: #f1f1f1;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ddd;
+        }
+
+        .headings1 {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .headings1 a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .achive {
+            display: grid;
+            grid-template-columns: 24% 24% 24% 24%;
+            gap: 1%;
+            margin-top: 20px;
+
+        }
+
+        .achie-card {
+            border: 1px solid black;
+            padding: 20px;
+        }
+        .achie-card p{
+            color: grey;
+            margin-top: 15px;
+        }
+        .achie-card h4{
+            margin-top: 10px;
+        }
+        .achie-card h5{
+            margin-left: 200px;
+        }
+
+
+        .balakrishna {
+            display: flex;
+            background-color: rgb(114, 247, 203);
+            gap: 40px;
+            margin-left: 10px;
+             margin-bottom: 30px; 
+             margin-top: 20px;
+
+
+        }
+
+        .bala-content p {
+            padding-top: 50px;
+            color: grey;
+        }
+
+        .bala-content h2 {
+            padding-top: 200px;
+            color: rgb(0, 21, 255);
+        }
+
+        .bala-content h4 {
+            padding-top: 20px;
+        }
+
+        .bala-content h3 {
+            padding-top: 30px;
+        }
+
+        .res {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 30px;
+            margin-left: 10px;
+        }
+
+        .res-card {
+            border: 1px solid black;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .res-card p{
+            color: grey;
+           padding: 10px;
+        }
+        .res-card h6{
+            margin-left: 200px;
+        }
+
+
+        footer {
+            background: #000;
+            color: white;
+            padding: 20px 50px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .social-icons a {
+            color: white;
+            border: 1px solid white;
+            border-radius: 50%;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .social-icons a:hover {
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="https://ncbn.info/wp-content/uploads/2022/08/logo.png">
+
+            </div>
+            <div class="nav">
+                <a href="">HOME</a>
+                <a href="http://127.0.0.1:5500/cbnabout.html">ABOUT</a>
+                <a href="http://127.0.0.1:5500/achivements.html">ACHIEMENTS </a>
+                <a href="http://127.0.0.1:5500/cbnleader.html">LEADERSHIP</a>
+                <a href="http://127.0.0.1:5500/cbnnews.html">NEWS</a>
+                <a href="http://127.0.0.1:5500/cbngallery.html">GALLERY</a>
+                <!-- <a href="">AWARDS</a>
+                <a href="">TDP</a>
+                <a href="">RESOURCES</a>
+                <a href="">GFST</a> -->
+            </div>
+            <div class="icons">
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+        </div>
+    </header>
+    <section class="cbn">
+        <div class="image">
+            <img src="https://ncbn.info/wp-content/uploads/2022/08/slider01.jpg">
+
+        </div>
+        <div class="content">
+            <h1>
+                Nara Chandrababu Naidu is an Indian politician hailed for his futuristic outlook.
+            </h1>
+            <p>
+                In a public life spanning for more than four decades, he has to his credit many trail-blazing
+                initiatives that brought about revolutionary changes in the economic and social life of the people.
+                Known for embracing technology to make governance people-friendly, he has been a pioneer in furthering
+                the knowledge economy in the country, benefiting many generations of countless young men and women.
+            </p>
+            <button>READ MORE</button>
+
+        </div>
+
+
+    </section>
+    <div class="latest-heading">
+            <h2>LATEST POST</h2>
+
+        </div>
+    <div class="pic">
+        
+        <div class="photos">
+             
+            <img src="https://ncbn.info/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-07-at-8.53.47-PM.jpeg"
+                height="200px" width="200px">
+            <h3>CHANDRA BABU Naidu swings into poll mode to address</h3>
+            <p>Deccan Herlandljanuary 2,2024<br>Hyderabad:Telugu Desam party(TDP)</p>
+            <h4>admin</h4>
+            <p>january 13,2024</p>
+        </div>
+        <div class="photos">
+            <img src="https://ncbn.info/wp-content/uploads/2024/06/N.-Chandrababu-Naidu-Return-of-the-kingmaker.jpg"
+                height="200px" width="200px">
+            <h3>N.Chandrababu Naidu:Return<br>of the kingmaker</h3>
+            <p>Appaji Reddem|The hindu|june 09,<br>2024 for Nara Chandrababu Naidu,</p>
+            <h4>admin</h4>
+            <p>june 09 ,2024</p>
+        </div>
+
+        <div class="photos">
+            <img src="https://ncbn.info/wp-content/uploads/2024/06/Screenshot-2024-06-09-181220.png" height="200px"
+                width="200px">
+            <h3>
+                Chandrababu Naidu Carries <br>
+                Ramoji Rao's Remains AS
+            </h3>
+            <p>
+                Indo-Asain News service | june 09, <br>
+                2024 Media baron cherukuri Ramoji
+            </p>
+            <h4>
+                admin
+            </h4>
+            <p>
+                june 9,2024
+            </p>
+        </div>
+        <div class="photos">
+            <img src="https://ncbn.info/wp-content/uploads/2024/06/WhatsApp-Image-2024-06-11-at-2.05.11-PM.jpeg"
+                height="200px" width="200px">
+            <h3>
+                TDP supremo N Chandrababu <br>
+                Naidu elected as NDA's CM
+            </h3>
+            <p>
+                Express News Service | june 11,2024 <br>
+                Former Chief Minister and TDP nation
+            </p>
+            <h4>admin</h4>
+            <p>june 11,2024</p>
+        </div>
+    </div>
+    <div class="valli">
+
+        <!-- Left Section -->
+        <div class="gallery-section">
+
+            <div class="heading">
+                <h2>PHOTO GALLERY</h2>
+                <a href="#">VIEW ALL</a>
+            </div>
+
+            <div class="gallery">
+                <div class="card">
+                    <img src="https://ncbn.info/wp-content/uploads/2022/08/img01.jpg" height="200px" width="200px">
+                    <div class="overlay">
+                        Chandrababu Naidu at Party Office
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://ncbn.info/wp-content/uploads/2022/08/img02.jpg" height="200px" width="200px">
+                    <div class="overlay">
+                        NCBN at the first swearing-in of NTR
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://ncbn.info/wp-content/uploads/2022/08/img06.jpg" height="200px" width="200px">
+                    <div class="overlay">
+                        NCBN as a student at SV University
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Right Section -->
+        <div class="tweet-section">
+
+            <div class="profile">
+
+                <img src="https://pbs.twimg.com/profile_images/1661933747271524352/RpQ2zGnQ_normal.jpg" height="50px"
+                    width="50px">
+
+                <div>
+                    <h3>N Chandrababu Naidu</h3>
+
+                    <p>
+                        Chief Minister of Andhra Pradesh |
+                        Member of Legislative Assembly
+                    </p>
+                </div>
+
+            </div>
+
+
+
+            <div class="tweet">
+
+                <div class="tweet-head">
+
+                    <img src="https://pbs.twimg.com/profile_images/1661933747271524352/RpQ2zGnQ_normal.jpg"
+                        height="50px" width="50px">
+
+                    <div>
+                        <h4>N Chandrababu Naidu</h4>
+                        <span>@ncbn • 29 Jun</span>
+                    </div>
+
+                </div>
+
+                <p>
+                    తెలుగువారికి అభివృద్ధి పథంలో ముందుకు
+                    తీసుకెళ్లే ప్రయత్నాలు కొనసాగుతాయి.
+                </p>
+
+
+
+            </div>
+
+            <button>Load More</button>
+
+        </div>
+
+    </div>
+    <div class="achiements">
+        <div class="headings1">
+            <h2>ACHIVEMENTS</h2>
+            <a href="#">VIEW ALL</a>
+
+        </div>
+        <div class="achive">
+            <div class="achie-card">
+                <img src="https://ncbn.info/wp-content/uploads/2022/08/USIBC.jpg" height="200px" width="200px">
+                <h3>CHANDRA BABU NAIDU BRINGS THE TECHS FROM CISCO</h3>
+                <P>Ashish Kulshrestha|The Economic<br>Times|May09,2017 United states...</P>
+                <h4>admin</h4>
+                <p>November 29,2022</p>
+                <h5>Achivments</h5>
+            </div>
+            <div class="achie-card">
+                <img src="https://ncbn.info/wp-content/uploads/2022/11/cbn-with-bill-gates-1536x864.jpg" height="200px"
+                    width="200px">
+                <h3>BILL GATES RECALLS FIRST Meeting with naidu 20years ago</h3>
+                <p>Firstpost|November 20,2017 Microsoft<br>Founder Bill Gates on Friday said he..</p>
+                <h4>admin</h4>
+                <p>August 25, 2023</p>
+                <h5>Achivments</h5>
+            </div>
+            <div class="achie-card">
+                <img src="https://ncbn.info/wp-content/uploads/2022/08/item01-1.jpg" height="200px" width="200px">
+                <h3>'CEO' CM Who Superseded his<br>famous father-in-law</h3>
+                <p>The Hyderabad Information Technology<br>and Engineering Consultancy City...</p>
+                <h4>admin</h4>
+                <p>October 19,2022</p>
+                <h5>Achivements</h5>
+            </div>
+            <div class="achie-card">
+                <img src="https://ncbn.info/wp-content/uploads/2022/08/Chandrababu-Naidu-at-Blockchain-Conference-in-Vizag.jpg"
+                    height="200px" width="200px">
+                <h3>How Andhra Pradesh Is<br>Emerging As India's Blockcha...</h3>
+                <p>Smitha Singh|March 17,2018 After <br>changing Hyderabad into an it hub...</p>
+                <h4>admin</h4>
+                <p>November 9,2022</p>
+                <h5>Achivements</h5>
+            </div>
+        </div>
+    </div>
+    <div class="balakrishna">
+        <div class="bala-img">
+            <img src="https://ncbn.info/wp-content/uploads/2023/10/WhatsApp-Image-2023-10-31-at-5.02.28-PM-scaled.jpeg"
+                height="600px" width="600px">
+        </div>
+        <div class="bala-content">
+
+            <h2>Chandrababu Comes Out After 52 Days<br></h2>
+
+            <h4>Chandrababu Naidu released from Central Prison, Rajahmundry prison, on interim bail.<br></h4>
+            <p>
+                Chandrababu Naidu walks out of the gates of the Rajahmundry Central Prison to meet a beaming grandson
+                Devansh.
+            </p>
+
+            <h3>
+                Oct 31, 2023
+            </h3>
+        </div>
+
+    </div>
+    <div class="resources">
+        <div rescources-heading>
+            <h2>RESOURCES</h2>
+
+        </div>
+        <div class="res">
+            <div class="res-card">
+                <img src="https://ncbn.info/wp-content/uploads/2022/10/clinton.jpg" height="200px" width="200px">
+                <h3>Naidu Confident about Clinton's trip</h3>
+                <p>Syed Amin Jafri|Rediff.com|,<br>November 22,2002 A high-level|Us...</p>
+                <h4>admin</h4>
+                <p>November 14,2022</p>
+                <h6>RESOURCES</h6>
+            </div>
+            <div class="res-card">
+                <img src="https://ncbn.info/wp-content/uploads/2022/08/cbn-with-vajpyaee.jpg" height="200px"
+                    width="200px">
+                <h3>I have left politics behind in the last millennium</h3>
+                <p>George iype|Rediff.com|February 8,<br>2000 Andhra Pradesh Cheif Minister..</p>
+                <h4>admin</h4>
+                <p>November 14,2022</p>
+                <h6>RESOURCES</h6>
+            </div>
+            <div class="res-card">
+                <img src="https://ncbn.info/wp-content/uploads/2022/11/babu-with-vajpayee.jpg" height="200px"
+                    width="200px">
+                <h3>A triumph of allian arithmetic-An analysis of..</h3>
+                <p>CSDS Team with K.C.Suri|Frontline|<br>Nov 06,1999 IT is easy to read too..</p>
+                <h4>admin</h4>
+                <p>November 14,2022</p>
+                <h6>RESOURCES</h6>
+            </div>
+            <div class="res-card">
+                <img src="https://ncbn.info/wp-content/uploads/2022/10/cbn2.jpg" height="200px" width="200px">
+                <h3>Cyberbabu of Hyderabad- Naidu's Little Known...</h3>
+                <p>Down to Earth|15 February 1999<br>Chandrababu Naidu is Known more for...</p>
+                <h4>admin</h4>
+                <p>November 14,2022</p>
+                <h6>RESOURCES</h6>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 Copyright © CBN 2025. All rights reserved.</p>
+
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>
+
+</body>
+
+</html>
