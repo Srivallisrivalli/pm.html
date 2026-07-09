@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+
+body{
+    background:#f5f5f5;
+}
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#222;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 8%;
+    
+}
+
+.logo{
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-size:18px;
+     transition:0.3s; 
+}
+
+  nav a:hover{
+    color:hwb(193 40% 25%);
+}  
+
+section{
+    padding:100px 8%;
+}
+.home{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:100vh;
+    background:white;
+}
+
+.content{
+    width:50%;
+}
+
+.content h3{
+    font-size:30px;
+}
+
+.content h1{
+    font-size:60px;
+    color:black;
+    margin:10px 0;
+}
+
+.content h2{
+    font-size:35px;
+}
+
+.content p{
+    margin:20px 0;
+    line-height:28px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    background:hsl(184, 100%, 50%);
+    color:white;
+    padding:12px 30px;
+    border-radius:5px;
+}
+
+.btn:hover{
+    background:#222;
+}
+
+
+
+.about{
+    text-align:center;
+}
+
+.about h2,
+.skills h2,
+.projects h2{
+    font-size:40px;
+    color:black;
+    margin-bottom:30px;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    line-height:30px;
+}
+.skill-content{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.skill{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 5px 10px rgba(0,0,0,.2);
+    
+}
+
+
+.project-content{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.project{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 10px rgba(0,0,0,.2);
+      
+}
+
+.project h3{
+    color:black;
+    margin-bottom:15px;
+}
+
+  
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+
+
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">Portfolio</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+</nav>
+
+</header>
+
+<section class="home" id="home">
+
+<div class="content">
+
+<h3>Hello, I'm</h3>
+
+<h1>srivalli boppana</h1>
+
+<h2>Frontend Developer</h2>
+
+<p>
+I am passionate about building responsive and attractive websites
+using HTML, CSS, and JavaScript.
+</p>
+
+<a href="#" class="btn">Download CV</a>
+
+</div>
+
+
+
+</section>
+
+<section class="about" id="about">
+
+<h2>About Me</h2>
+
+<p>
+I am a Frontend Developer with knowledge of HTML, CSS, JavaScript,
+Bootstrap, and responsive web design. I enjoy creating modern,
+user-friendly websites and continuously improving my development
+skills.
+</p>
+
+</section>
+
+<section class="skills" id="skills">
+
+<h2>My Skills</h2>
+
+<div class="skill-content">
+
+<div class="skill">HTML</div>
+
+<div class="skill">CSS</div>
+
+<div class="skill">JavaScript</div>
+
+<div class="skill">Bootstrap</div>
+
+
+
+</div>
+
+</section>
+
+<section class="projects" id="projects">
+
+<h2>My Projects</h2>
+
+<div class="project-content">
+
+<div class="project">
+<h3>Portfolio Website</h3>
+<p>Designed a responsive portfolio using HTML and CSS.</p>
+</div>
+
+<div class="project">
+<h3>Shopping Website</h3>
+<p>Developed an e-commerce website with responsive product cards.</p>
+</div>
+
+<div class="project">
+<h3>PM India Clone</h3>
+<p>Created a responsive government website clone using HTML and CSS.</p>
+</div>
+
+<div class="project">
+<h3>Pottery Website</h3>
+<p>Designed a modern pottery website with animations and hover effects.</p>
+</div>
+
+
+
+<div class="project">
+<h3>CBN Website</h3>
+<p>Responsive website with banners, navigation, and modern layouts.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Srivalli Boppana | All Rights Reserved</p>
+
+</footer>
+
+</body>
+</html>
